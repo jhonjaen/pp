@@ -1,0 +1,69 @@
+<html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style type="text/css">
+		body{
+			color: black;
+			background-color: beige;
+		}
+		#set1{
+			font-size: 60px;
+			text-align: center;
+		}
+		#set2{
+			display: grid;
+			grid-template-columns: auto;
+			
+		}
+		.set2 img{
+			width: 50%;
+		
+			
+		}
+
+	</style>
+<title>PWA</title>
+</head>
+<body class="container p-3">
+	<section id="set1">
+
+		<h1> El Mini Pekka</h1>
+		
+	</section>
+	<section id="set2">
+	<div class="set2">
+	</div>
+	</section>
+	
+	<script >
+		const dat=[{
+			img:'./Mini_PK.png',
+			desc:'jijijija'
+		}]
+		console.log("hola");
+		let set2=document.querySelector('#set2');
+		console.log(set2)
+		
+	function dinamic(src, desc){	
+		let div=document.createElement("div");
+		let img=document.createElement("img");
+		let p=document.createElement("p");
+		img.src=src;
+		p.innerHTML=desc;
+		div.appendChild(img);
+		div.appendChild(p);
+		set2.appendChild(div);
+	}
+		dat.forEach(({img,desc})=>dinamic(img,desc));
+
+		let btn = document.createElement("button");
+		btn.innerHTML = "Hello Button";
+		document.body.appendChild(btn);
+	</script>
+</body>
+
+</html>
